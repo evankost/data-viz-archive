@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0308.0326                               -->
+<workbook original-version='18.1' source-build='2024.1.1 (20241.24.0308.0326)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Europe Road Deaths by Vehicle Type Extract' inline='true' name='federated.0h2a4j8184ew3112kfcc516myfnq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Europe Road Deaths by Vehicle Type' name='hyper.1epcice1xhmz5p12rtgvi0jcpajo'>
+            <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Vag/OneDrive - National and Kapodistrian University of Athens/ΟΠΤΙΚΟΠΟΙΗΣΗ ΔΕΔΟΜΕΝΩΝ/ΕΡΓΑΣΙΕΣ/ΔΕΥΤΕΡΗ ΕΡΓΑΣΙΑ/My Tableau Prep Repository/Datasources/Europe Road Deaths by Vehicle Type.hyper' default-settings='yes' port='0' server='' sslmode='' username='tableau_internal_user' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='hyper.1epcice1xhmz5p12rtgvi0jcpajo' name='Extract' table='[Extract].[Extract]' type='table'>
+          <columns>
+            <column datatype='date' date-parse-format='yyyy' name='Year' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='hyper.1epcice1xhmz5p12rtgvi0jcpajo' name='Extract' table='[Extract].[Extract]' type='table'>
+          <columns>
+            <column datatype='date' date-parse-format='yyyy' name='Year' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Vehicle Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Vehicle Type]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Vehicle Type</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>26</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E2D41B60E27F4BCC8270D4E852B2FE6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E2D41B60E27F4BCC8270D4E852B2FE6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Deaths]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Deaths</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>381</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E2D41B60E27F4BCC8270D4E852B2FE6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>32</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E2D41B60E27F4BCC8270D4E852B2FE6E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Vehicle Type (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Vehicle Type]' new-bin='true'>
+          <bin default-name='false' value='&quot;Four Wheel&quot;'>
+            <value>&quot;Agricultural tractors&quot;</value>
+            <value>&quot;Buses&quot;</value>
+            <value>&quot;Electric powered assisted cycle&quot;</value>
+            <value>&quot;<![CDATA[Goods road motor vehicles <= 3.5 tonnes]]>&quot;</value>
+            <value>&quot;Goods road motor vehicles &gt; 3.5 tonnes&quot;</value>
+            <value>&quot;Goods road vehicles&quot;</value>
+            <value>&quot;Mini-buses&quot;</value>
+            <value>&quot;Passenger cars&quot;</value>
+            <value>&quot;Road tractors&quot;</value>
+            <value>&quot;Trams and light rail vehicles&quot;</value>
+            <value>&quot;Trolley buses&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Other &amp; Unknown&quot;'>
+            <value>&quot;Other&quot;</value>
+            <value>&quot;Other motorized vehicles&quot;</value>
+            <value>&quot;Other non-motorized vehicles&quot;</value>
+            <value>&quot;Riding animals&quot;</value>
+            <value>&quot;Unknown&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Two Wheel&quot;'>
+            <value>&quot;Bicycles&quot;</value>
+            <value>&quot;Mopeds&quot;</value>
+            <value>&quot;Motor coaches&quot;</value>
+            <value>&quot;Motorcycles &lt;= 125cm3&quot;</value>
+            <value>&quot;Motorcycles &gt; 125cm3&quot;</value>
+            <value>&quot;Motorcycles not specified&quot;</value>
+            <value>&quot;Motorized micro-mobility vehicles&quot;</value>
+            <value>&quot;Quads &lt;= 50cm3&quot;</value>
+            <value>&quot;Quads &gt; 50cm3&quot;</value>
+            <value>&quot;Two-wheeled road motor vehicles (motorcycles)&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Vehicle Type]' role='dimension' type='nominal' />
+      <column aggregation='Count' datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Extract' datatype='table' name='[__tableau_internal_object_id__].[Extract (Extract.Extract)_E2D41B60E27F4BCC8270D4E852B2FE6E]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Vehicle Type (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Four Wheel&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Two Wheel&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Other &amp; Unknown&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Greece&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Extract' id='Extract (Extract.Extract)_E2D41B60E27F4BCC8270D4E852B2FE6E'>
+            <properties context=''>
+              <relation connection='hyper.1epcice1xhmz5p12rtgvi0jcpajo' name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy' name='Year' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Grouped Treemap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Europe Road Deaths by Vehicle Type Extract' name='federated.0h2a4j8184ew3112kfcc516myfnq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0h2a4j8184ew3112kfcc516myfnq'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='integer' name='[Deaths]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Vehicle Type (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Vehicle Type]' new-bin='true'>
+                <bin default-name='false' value='&quot;Four Wheel&quot;'>
+                  <value>&quot;Agricultural tractors&quot;</value>
+                  <value>&quot;Buses&quot;</value>
+                  <value>&quot;Electric powered assisted cycle&quot;</value>
+                  <value>&quot;<![CDATA[Goods road motor vehicles <= 3.5 tonnes]]>&quot;</value>
+                  <value>&quot;Goods road motor vehicles &gt; 3.5 tonnes&quot;</value>
+                  <value>&quot;Goods road vehicles&quot;</value>
+                  <value>&quot;Mini-buses&quot;</value>
+                  <value>&quot;Passenger cars&quot;</value>
+                  <value>&quot;Road tractors&quot;</value>
+                  <value>&quot;Trams and light rail vehicles&quot;</value>
+                  <value>&quot;Trolley buses&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Other &amp; Unknown&quot;'>
+                  <value>&quot;Other&quot;</value>
+                  <value>&quot;Other motorized vehicles&quot;</value>
+                  <value>&quot;Other non-motorized vehicles&quot;</value>
+                  <value>&quot;Riding animals&quot;</value>
+                  <value>&quot;Unknown&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Two Wheel&quot;'>
+                  <value>&quot;Bicycles&quot;</value>
+                  <value>&quot;Mopeds&quot;</value>
+                  <value>&quot;Motor coaches&quot;</value>
+                  <value>&quot;Motorcycles &lt;= 125cm3&quot;</value>
+                  <value>&quot;Motorcycles &gt; 125cm3&quot;</value>
+                  <value>&quot;Motorcycles not specified&quot;</value>
+                  <value>&quot;Motorized micro-mobility vehicles&quot;</value>
+                  <value>&quot;Quads &lt;= 50cm3&quot;</value>
+                  <value>&quot;Quads &gt; 50cm3&quot;</value>
+                  <value>&quot;Two-wheeled road motor vehicles (motorcycles)&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Vehicle Type]' role='dimension' type='nominal' />
+            <column aggregation='Count' datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Vehicle Type]' derivation='None' name='[none:Vehicle Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0h2a4j8184ew3112kfcc516myfnq].[none:Country:nk]'>
+            <groupfilter function='member' level='[none:Country:nk]' member='&quot;Greece&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0h2a4j8184ew3112kfcc516myfnq].[yr:Year:ok]'>
+            <groupfilter function='member' level='[yr:Year:ok]' member='2021' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0h2a4j8184ew3112kfcc516myfnq].[yr:Year:ok]</column>
+            <column>[federated.0h2a4j8184ew3112kfcc516myfnq].[none:Country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0h2a4j8184ew3112kfcc516myfnq].[sum:Deaths:qk]' />
+              <color column='[federated.0h2a4j8184ew3112kfcc516myfnq].[Vehicle Type (group)]' />
+              <text column='[federated.0h2a4j8184ew3112kfcc516myfnq].[none:Vehicle Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{33CD4671-4AF4-44A6-BB98-CB7A7762F6B3}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Grouped Treemap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0h2a4j8184ew3112kfcc516myfnq].[none:Country:nk]' show-all='false' type='filter' />
+            <card mode='dropdown' param='[federated.0h2a4j8184ew3112kfcc516myfnq].[yr:Year:ok]' show-all='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0h2a4j8184ew3112kfcc516myfnq].[Vehicle Type (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0h2a4j8184ew3112kfcc516myfnq].[Vehicle Type (group)]</field>
+            <field>[federated.0h2a4j8184ew3112kfcc516myfnq].[none:Country:nk]</field>
+            <field>[federated.0h2a4j8184ew3112kfcc516myfnq].[none:Vehicle Type:nk]</field>
+            <field>[federated.0h2a4j8184ew3112kfcc516myfnq].[yr:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6C7F7646-CDD7-441A-A67C-965502F274B7}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Grouped Treemap' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAEuUlEQVR4nO3YT2/bdBzH8c/PsZPlH21px1q0jR04DE5IcII9NB4KDwEeA9LuIMRhHCoa
+      9bB2a9P8aeImduyYQw+sImokKhKhz/t1iez8FH9t5R3FDlVVVQJMRdseANgmAoC1+MON6SxX
+      73y0rVmAjbsTQO98qO9/+HlbswAbx18gWFsZQLdV11efP1EjqW16HmCj4lU7u82GarVIX754
+      rIOdlm6yhd4PUu11H+lRPdZNtlBci3SdZtrrNjWd5Xq809LV9Ux/nF7q5WcHmmeFnn3ykd4N
+      U9XjSKNpppOz4abPD7jXygDmi0K/Hb/T8yc7CiEonedK4kj1pKbBZKbRZK5sUepwv6NWI1Z/
+      fKOT86Gms1zZolRVSUlc02Ay18UglYL06X5n0+cGrLUygMH1TJLUOx/d+1QoneVKVzw5+v3P
+      9/9YezFMHzIn8J940E3wLC94bIr/NZ4CwRoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwFqoqqra9hDAtsQfbhQXl0pfv97WLMDG3Q3g
+      8lLjH3/a1izAxnEPAGsrA6jtf6zk6VM1v/n674Xd7toPi48O7z/Yms8IrabioyPFR0d35zk4
+      WHts4N+IV+0McaLQbCrqdtX44qWidltRs6lyPFZIEqmSqqJQOR4r6nYUkkTl1UC13V21X71S
+      fnp6+/7FpZLnz27XNVsKjbpmv/yq9nffqhwOpThWSBKFONZymqpa5FIcq5rPlRweKtrbVXk1
+      UJXNVfb7m742MLAygOV0KoWg7M0bSUHLeSZVlVQUUpKo7PcVGg2FRkNRq6X8+FhRp6vF2Zm0
+      XKoYDhRCpHI0UjkaKep0VLXmqoqFpEr5SU+h1ZSyTOVgqFCvK8Q1VVmucjyWVClqtxVGQ4Wo
+      puVNutGLAh+rA0hTLdM1X7rJRJJUvH0rSSqHo9vXFb/Uy+n0znbe660dbDmZrl0DPBQ3wbBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALD2F6D3BhQ7no2VAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

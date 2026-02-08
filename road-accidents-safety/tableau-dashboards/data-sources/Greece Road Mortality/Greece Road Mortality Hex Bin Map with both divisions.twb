@@ -1,0 +1,1665 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0308.0326                               -->
+<workbook original-version='18.1' source-build='2024.1.1 (20241.24.0308.0326)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.RelationshipCalculations.true...RelationshipCalculations />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Bin_Count' datatype='real' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='25.187593796898447'>
+        <calculation class='tableau' formula='25.187593796898447' />
+        <range max='50.0' min='10.0' />
+      </column>
+    </datasource>
+    <datasource caption='Extract+ (Multiple Connections)' inline='true' name='federated.0fib1of0tsxuii1a4zv8l0jktrl1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='padding' name='textscan.0wn6d2s0a52gpp17bszak10lz37d'>
+            <connection class='textscan' directory='C:/Users/Vag/OneDrive - National and Kapodistrian University of Athens/ΟΠΤΙΚΟΠΟΙΗΣΗ ΔΕΔΟΜΕΝΩΝ/ΕΡΓΑΣΙΕΣ/ΔΕΥΤΕΡΗ ΕΡΓΑΣΙΑ/Final/Greece Road Mortality' filename='padding.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Greece Road Accidents Mortality' name='hyper.1o8ht9z1lkfpmc0zlllt20v4a8uz'>
+            <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Vag/OneDrive - National and Kapodistrian University of Athens/ΟΠΤΙΚΟΠΟΙΗΣΗ ΔΕΔΟΜΕΝΩΝ/ΕΡΓΑΣΙΕΣ/ΔΕΥΤΕΡΗ ΕΡΓΑΣΙΑ/Final/Greece Road Mortality/Greece Road Accidents Mortality.hyper' default-settings='yes' port='0' server='' sslmode='' username='tableau_internal_user' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='hyper.1o8ht9z1lkfpmc0zlllt20v4a8uz' name='Extract' table='[Extract].[Extract]' type='table'>
+          <columns>
+            <column datatype='date' date-parse-format='yyyy' name='Year' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='hyper.1o8ht9z1lkfpmc0zlllt20v4a8uz' name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='Year' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0wn6d2s0a52gpp17bszak10lz37d' name='padding.csv' table='[padding#csv]' type='table'>
+            <columns character-set='UTF-8' header='no' locale='en_US'>
+              <column datatype='integer' name='F1' ordinal='0' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[padding.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;false&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Δήμος-Περιφερειακή Ενότητα</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Δήμος-Περιφερειακή Ενότητα]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Δήμος-Περιφερειακή Ενότητα</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Τοποθεσία</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Τοποθεσία]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Τοποθεσία</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>419</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Θάνατοι</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Θάνατοι]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Θάνατοι</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>37</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Geometry]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>419</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>418</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ατυχήματα</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ατυχήματα]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Ατυχήματα</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>223</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Παθόντες</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Παθόντες]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Παθόντες</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>270</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[padding.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[padding.csv_200592BE94BF41209159F36D87EA3B1C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='RightMost Point' datatype='spatial' name='[Calculation_263179113855836160]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='MAKEPOINT({AVG([Latitude])},{MAX([Longitude])})' />
+      </column>
+      <column caption='LeftMost Point' datatype='spatial' name='[Calculation_263179113856053249]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='MAKEPOINT({AVG([Latitude])},{MIN([Longitude])})' />
+      </column>
+      <column caption='Data Width' datatype='real' name='[Calculation_263179113856208898]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DISTANCE([Calculation_263179113855836160],[Calculation_263179113856053249],&quot;km&quot;)' />
+      </column>
+      <column caption='Dynamic BinSize' datatype='real' name='[Calculation_263179113856454659]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='EXP((LN([Calculation_263179113856667652])-4.72455)/(-1.006))' />
+      </column>
+      <column caption='Hex_Length' datatype='real' name='[Calculation_263179113856667652]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='2/3*[Calculation_263179113856208898]/[Parameters].[Parameter 2]' />
+      </column>
+      <column caption='Pad' datatype='integer' name='[Calculation_372672878480556034]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF [Latitude] = {FIXED [Calculation_659214406077276160], [Calculation_659214406077276160 1] : MAX([Latitude])} THEN 1 ELSE 6 END' />
+      </column>
+      <column caption='Bin_ID' datatype='string' name='[Calculation_425871650380410884]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([Calculation_659214406077276160])+ STR([Calculation_659214406077276160 1])' />
+      </column>
+      <column caption='HexBin X' datatype='real' name='[Calculation_659214406077276160 1]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+        <calculation class='tableau' formula='HexbinX([Latitude]*[Calculation_263179113856454659], [Longitude]*[Calculation_263179113856454659])&#13;&#10;       /([Calculation_263179113856454659])' />
+      </column>
+      <column caption='HexBin Y' datatype='real' name='[Calculation_659214406077276160]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+        <calculation class='tableau' formula='HexbinY([Latitude]*[Calculation_263179113856454659], [Longitude]*[Calculation_263179113856454659])&#13;&#10;       /([Calculation_263179113856454659])' />
+      </column>
+      <column caption='Angle' datatype='real' name='[Calculation_659214406078939137]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='PI()/3* INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='HexLat' datatype='real' name='[Calculation_659214406080745474]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_AVG(AVG([Calculation_659214406077276160 1]))+(1/MIN([Calculation_263179113856454659]))*COS([Calculation_659214406078939137])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='Sum' caption='Padding' datatype='integer' name='[F1]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Geometry]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='HexLong ' datatype='real' name='[HexLat (copy)_659214406081265667]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_AVG(AVG([Calculation_659214406077276160]))+(1/MIN([Calculation_263179113856454659]))*SIN([Calculation_659214406078939137])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='None' caption='Padded' datatype='integer' name='[Pad (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Calculation_372672878480556034]' peg='0' size='1' />
+      </column>
+      <column aggregation='Count' datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Extract' datatype='table' name='[__tableau_internal_object_id__].[Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='padding.csv' datatype='table' name='[__tableau_internal_object_id__].[padding.csv_200592BE94BF41209159F36D87EA3B1C]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Δήμοι - Περειφερειακές Ενότητες]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Τοποθεσία]' new-bin='true'>
+          <bin default-name='false' value='&quot;Δήμοι&quot;'>
+            <value>&quot;ΑΓΙΟ ΟΡΟΣ (Αυτοδιοίκητο)&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΒΔΗΡΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΑΘΟΝΗΣΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΑΣ ΒΑΡΒΑΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΑΣ ΠΑΡΑΣΚΕΥΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΒΑΣΙΛΕΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΔΗΜΗΤΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΕΥΣΤΡΑΤΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΝΙΚΟΛΑΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΙΩΝ ΑΝΑΡΓΥΡΩΝ - ΚΑΜΑΤΕΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΚΙΣΤΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΡΑΦΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΓΡΙΝΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΘΗΝΑΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΙΓΑΛΕΩ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΙΓΙΑΛΕΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΙΓΙΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΚΤΙΟΥ - ΒΟΝΙΤΣΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΛΕΞΑΝΔΡΕΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΛΙΑΡΤΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΛΙΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΛΜΥΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΛΜΩΠΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΛΟΝΝΗΣΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΑΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΑΡΟΥΣΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΟΡΓΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΠΕΛΟΚΗΠΩΝ - ΜΕΝΕΜΕΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΥΝΤΑΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΦΙΚΛΕΙΑΣ - ΕΛΑΤΕΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΦΙΛΟΧΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΜΦΙΠΟΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΝΑΤΟΛΙΚΗΣ ΜΑΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΝΑΦΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΝΔΡΑΒΙΔΑΣ - ΚΥΛΛΗΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΝΔΡΙΤΣΑΙΝΑΣ - ΚΡΕΣΤΕΝΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΝΔΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΝΤΙΠΑΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΝΩΓΕΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΠΟΚΟΡΩΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΡΓΙΘΕΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΡΓΟΥΣ - ΜΥΚΗΝΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΡΙΣΤΟΤΕΛΗ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΡΡΙΑΝΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΡΤΑΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΡΧΑΙΑΣ ΟΛΥΜΠΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΡΧΑΝΩΝ - ΑΣΤΕΡΟΥΣΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΣΠΡΟΠΥΡΓΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΣΤΥΠΑΛΑΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΑΧΑΡΝΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΑΡΗΣ - ΒΟΥΛΑΣ - ΒΟΥΛΙΑΓΜΕΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΕΛΟΥ - ΒΟΧΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΕΡΟΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΙΑΝΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΙΣΑΛΤΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΟΪΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΟΛΒΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΟΛΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΟΡΕΙΑΣ ΚΥΝΟΥΡΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΟΡΕΙΩΝ ΤΖΟΥΜΕΡΚΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΡΙΛΗΣΣΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΒΥΡΩΝΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΓΑΛΑΤΣΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΓΑΥΔΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΓΕΩΡΓΙΟΥ ΚΑΡΑΪΣΚΑΚΗ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΓΛΥΦΑΔΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΓΟΡΤΥΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΓΟΡΤΥΝΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΓΡΕΒΕΝΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΑΦΝΗΣ - ΥΜΗΤΤΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΕΛΤΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΕΛΦΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΙΔΥΜΟΤΕΙΧΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΙΟΝΥΣΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΙΟΥ - ΟΛΥΜΠΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΙΡΦΥΩΝ - ΜΕΣΣΑΠΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΙΣΤΟΜΟΥ - ΑΡΑΧΟΒΑΣ - ΑΝΤΙΚΥΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΟΜΟΚΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΟΞΑΤΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΡΑΜΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΥΤΙΚΗΣ ΑΧΑΪΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΥΤΙΚΗΣ ΜΑΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΩΔΩΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΔΩΡΙΔΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΔΕΣΣΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΛΑΣΣΟΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΛΑΦΟΝΗΣΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΛΕΥΣΙΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΛΛΗΝΙΚΟΥ - ΑΡΓΥΡΟΥΠΟΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΜΜΑΝΟΥΗΛ ΠΑΠΠΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΟΡΔΑΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΠΙΔΑΥΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΡΕΤΡΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΡΜΙΟΝΙΔΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΡΥΜΑΝΘΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΕΥΡΩΤΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΖΑΓΟΡΑΣ - ΜΟΥΡΕΣΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΖΑΓΟΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΖΑΚΥΝΘΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΖΑΧΑΡΩΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΖΗΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΖΙΤΣΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΖΩΓΡΑΦΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΗΛΙΔΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΗΛΙΟΥΠΟΛΕΩΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΗΡΑΚΛΕΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΗΡΑΚΛΕΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΘΑΣΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΘΕΡΜΑΪΚΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΘΕΡΜΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΘΕΡΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΘΗΒΑΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΘΗΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΑΣΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΕΡΑΠΕΤΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΕΡΑΣ ΠΟΛΗΣ ΜΕΣΟΛΟΓΓΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΗΤΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΘΑΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΚΑΡΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΛΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΣΤΙΑΙΑΣ - ΑΙΔΗΨΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΙΩΑΝΝΙΤΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΒΑΛΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΙΣΑΡΙΑΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΛΑΒΡΥΤΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΛΑΜΑΡΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΛΑΜΑΤΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΛΑΜΠΑΚΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΛΛΙΘΕΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΛΥΜΝΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΝΤΑΝΟΥ - ΣΕΛΙΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΡΔΙΤΣΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΡΠΑΘΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΡΠΕΝΗΣΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΡΥΣΤΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΣΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΣΣΑΝΔΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΣΤΟΡΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΤΕΡΙΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΕΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΕΝΤΡΙΚΩΝ ΤΖΟΥΜΕΡΚΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΕΡΑΤΣΙΝΙΟΥ - ΔΡΑΠΕΤΣΩΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΕΡΚΥΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΕΦΑΛΟΝΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΗΦΙΣΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΙΛΕΛΕΡ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΙΛΚΙΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΙΜΩΛΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΙΣΣΑΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΟΖΑΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΟΜΟΤΗΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΟΝΙΤΣΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΟΡΔΕΛΙΟΥ - ΕΥΟΣΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΟΡΙΝΘΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΟΡΥΔΑΛΛΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΡΩΠΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΥΘΗΡΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΥΘΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΥΜΗΣ - ΑΛΙΒΕΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΚΩ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΑΓΚΑΔΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΑΜΙΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΑΡΙΣΑΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΑΥΡΕΩΤΙΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΕΒΑΔΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΕΙΨΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΕΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΕΣΒΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΕΥΚΑΔΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΗΜΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΙΜΝΗΣ ΠΛΑΣΤΗΡΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΟΚΡΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΟΥΤΡΑΚΙΟΥ - ΑΓΙΩΝ ΘΕΟΔΩΡΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΛΥΚΟΒΡΥΣΗΣ - ΠΕΥΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΑΚΡΑΚΩΜΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΑΛΕΒΙΖΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΑΝΔΡΑΣ - ΕΙΔΥΛΛΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΑΝΤΟΥΔΙΟΥ - ΛΙΜΝΗΣ - ΑΓΙΑΣ ΑΝΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΑΡΑΘΩΝΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΑΡΚΟΠΟΥΛΟΥ ΜΕΣΟΓΑΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΑΡΩΝΕΙΑΣ - ΣΑΠΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΕΓΑΛΟΠΟΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΕΓΑΝΗΣΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΕΓΑΡΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΕΓΙΣΤΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΕΣΣΗΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΕΤΑΜΟΡΦΩΣΕΩΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΕΤΣΟΒΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΗΛΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΙΝΩΑ ΠΕΔΙΑΔΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΟΝΕΜΒΑΣΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΟΣΧΑΤΟΥ - ΤΑΥΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΟΥΖΑΚΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΥΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΥΚΟΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΥΛΟΠΟΤΑΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΜΩΛΟΥ - ΑΓΙΟΥ ΚΩΝΣΤΑΝΤΙΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΑΞΟΥ ΚΑΙ ΜΙΚΡΩΝ ΚΥΚΛΑΔΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΑΟΥΣΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΑΥΠΑΚΤΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΑΥΠΛΙΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΑΠΟΛΗΣ - ΣΥΚΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΖΙΧΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΙΩΝΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΠΡΟΠΟΝΤΙΔΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΣΜΥΡΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΜΕΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΣΤΟΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΕΣΤΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΙΚΑΙΑΣ - ΑΓΙΟΥ ΙΩΑΝΝΗ ΡΕΝΤΗ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΙΣΥΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΟΤΙΑΣ ΚΥΝΟΥΡΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΝΟΤΙΟΥ ΠΗΛΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΞΑΝΘΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΞΗΡΟΜΕΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΞΥΛΟΚΑΣΤΡΟΥ - ΕΥΡΩΣΤΙΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΟΙΝΟΥΣΣΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΟΙΧΑΛΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΟΡΕΣΤΙΑΔΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΟΡΕΣΤΙΔΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΟΡΟΠΕΔΙΟΥ ΛΑΣΙΘΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΟΡΧΟΜΕΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΓΓΑΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΙΑΝΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΙΟΝΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΛΑΙΟΥ ΦΑΛΗΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΛΑΜΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΛΛΗΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΞΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΠΑΓΟΥ - ΧΟΛΑΡΓΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΡΑΝΕΣΤΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΡΓΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΤΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΤΡΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΑΥΛΟΥ ΜΕΛΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΕΙΡΑΙΩΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΕΛΛΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΕΝΤΕΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΕΡΑΜΑΤΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΕΡΙΣΤΕΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΕΤΡΟΥΠΟΛΕΩΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΗΝΕΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΛΑΤΑΝΙΑ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΟΛΥΓΥΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΟΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΡΕΣΠΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΡΟΣΟΤΣΑΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΥΔΝΑΣ - ΚΟΛΙΝΔΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΥΛΑΙΑΣ - ΧΟΡΤΙΑΤΗ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΥΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΥΛΟΥ - ΝΕΣΤΟΡΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΥΡΓΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΠΩΓΩΝΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΡΑΦΗΝΑΣ - ΠΙΚΕΡΜΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΡΕΘΥΜΝΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΡΗΓΑ ΦΕΡΑΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΡΟΔΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΑΛΑΜΙΝΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΑΜΟΘΡΑΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΑΜΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΑΡΩΝΙΚΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΕΡΒΙΩΝ - ΒΕΛΒΕΝΤΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΕΡΙΦΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΕΡΡΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΗΤΕΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΙΘΩΝΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΙΚΙΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΙΚΥΩΝΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΙΝΤΙΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΙΦΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΚΙΑΘΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΚΟΠΕΛΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΚΥΔΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΚΥΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΟΥΛΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΟΥΦΛΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΟΦΑΔΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΠΑΡΤΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΠΑΤΩΝ - ΑΡΤΕΜΙΔΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΠΕΤΣΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΤΥΛΙΔΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΥΜΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΥΡΟΥ - ΕΡΜΟΥΠΟΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΣΦΑΚΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΑΝΑΓΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΕΜΠΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΗΛΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΗΝΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΟΠΕΙΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΡΙΚΚΑΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΡΙΠΟΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΡΙΦΥΛΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΡΟΙΖΗΝΙΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΤΥΡΝΑΒΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΥΔΡΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΑΙΣΤΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΑΡΚΑΔΟΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΑΡΣΑΛΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΙΛΑΔΕΛΦΕΙΑΣ - ΧΑΛΚΗΔΟΝΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΙΛΙΑΤΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΙΛΟΘΕΗΣ - ΨΥΧΙΚΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΛΩΡΙΝΑΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΟΛΕΓΑΝΔΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΟΥΡΝΩΝ ΚΟΡΣΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΦΥΛΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΑΪΔΑΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΑΛΑΝΔΡΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΑΛΚΗΔΟΝΟΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΑΛΚΗΣ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΑΛΚΙΔΕΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΑΝΙΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΕΡΣΟΝΗΣΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΧΙΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΨΑΡΩΝ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΩΡΑΙΟΚΑΣΤΡΟΥ&quot;</value>
+            <value>&quot;ΔΗΜΟΣ ΩΡΩΠΟΥ&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Περιφερειακές Ενότητες&quot;'>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΙΤΩΛΟΑΚΑΡΝΑΝΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΝΑΤΟΛΙΚΗΣ ΑΤΤΙΚΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΝΔΡΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΡΓΟΛΙΔΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΡΚΑΔΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΡΤΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΧΑΪΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΒΟΙΩΤΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΒΟΡΕΙΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΓΡΕΒΕΝΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΔΡΑΜΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΔΥΤΙΚΗΣ ΑΤΤΙΚΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΔΥΤΙΚΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΕΒΡΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΕΥΒΟΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΕΥΡΥΤΑΝΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΖΑΚΥΝΘΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΗΛΕΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΗΜΑΘΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΗΡΑΚΛΕΙΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΑΣΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΕΣΠΡΩΤΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΕΣΣΑΛΟΝΙΚΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΗΡΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΙΘΑΚΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΙΚΑΡΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΙΩΑΝΝΙΝΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΒΑΛΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΛΥΜΝΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΡΔΙΤΣΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΡΠΑΘΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΣΤΟΡΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΑΣ - ΚΥΘΝΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΝΤΡΙΚΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΡΚΥΡΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΦΑΛΛΗΝΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΙΛΚΙΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΟΖΑΝΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΟΡΙΝΘΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΩ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΑΚΩΝΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΑΡΙΣΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΑΣΙΘΙΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΕΣΒΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΕΥΚΑΔΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΗΜΝΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΑΓΝΗΣΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΕΣΣΗΝΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΗΛΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΥΚΟΝΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΝΑΞΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΝΗΣΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΝΟΤΙΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΞΑΝΘΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΑΡΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΕΙΡΑΙΩΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΕΛΛΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΙΕΡΙΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΡΕΒΕΖΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΡΕΘΥΜΝΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΡΟΔΟΠΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΡΟΔΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΑΜΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΕΡΡΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΠΟΡΑΔΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΥΡΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΤΗΝΟΥ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΤΡΙΚΑΛΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΦΘΙΩΤΙΔΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΦΛΩΡΙΝΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΦΩΚΙΔΑΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΧΑΛΚΙΔΙΚΗΣ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΧΑΝΙΩΝ&quot;</value>
+            <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΧΙΟΥ&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Τοποθεσία]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Greece&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Bin_Count' datatype='real' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='25.187593796898447'>
+          <calculation class='tableau' formula='25.187593796898447' />
+          <range max='50.0' min='10.0' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Extract' id='Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788'>
+            <properties context=''>
+              <relation connection='hyper.1o8ht9z1lkfpmc0zlllt20v4a8uz' name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy' name='Year' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='padding.csv' id='padding.csv_200592BE94BF41209159F36D87EA3B1C'>
+            <properties context=''>
+              <relation connection='textscan.0wn6d2s0a52gpp17bszak10lz37d' name='padding.csv' table='[padding#csv]' type='table'>
+                <columns character-set='UTF-8' header='no' locale='en_US'>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression _.fcp.RelationshipCalculations.false...op='[1]' _.fcp.RelationshipCalculations.true...op='1' />
+              <expression _.fcp.RelationshipCalculations.false...op='[1]' _.fcp.RelationshipCalculations.true...op='1' />
+            </expression>
+            <first-end-point object-id='Extract (Extract.Extract)_E204B978EF264D24928B0306AA4B1788' />
+            <second-end-point object-id='padding.csv_200592BE94BF41209159F36D87EA3B1C' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='HexBin Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Extract+ (Multiple Connections)' name='federated.0fib1of0tsxuii1a4zv8l0jktrl1' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Bin_Count' datatype='real' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='25.187593796898447'>
+              <calculation class='tableau' formula='25.187593796898447' />
+              <range max='50.0' min='10.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0fib1of0tsxuii1a4zv8l0jktrl1'>
+            <column caption='RightMost Point' datatype='spatial' name='[Calculation_263179113855836160]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='MAKEPOINT({AVG([Latitude])},{MAX([Longitude])})' />
+            </column>
+            <column caption='LeftMost Point' datatype='spatial' name='[Calculation_263179113856053249]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='MAKEPOINT({AVG([Latitude])},{MIN([Longitude])})' />
+            </column>
+            <column caption='Data Width' datatype='real' name='[Calculation_263179113856208898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DISTANCE([Calculation_263179113855836160],[Calculation_263179113856053249],&quot;km&quot;)' />
+            </column>
+            <column caption='Dynamic BinSize' datatype='real' name='[Calculation_263179113856454659]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='EXP((LN([Calculation_263179113856667652])-4.72455)/(-1.006))' />
+            </column>
+            <column caption='Hex_Length' datatype='real' name='[Calculation_263179113856667652]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='2/3*[Calculation_263179113856208898]/[Parameters].[Parameter 2]' />
+            </column>
+            <column caption='HexBin X' datatype='real' name='[Calculation_659214406077276160 1]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+              <calculation class='tableau' formula='HexbinX([Latitude]*[Calculation_263179113856454659], [Longitude]*[Calculation_263179113856454659])&#13;&#10;       /([Calculation_263179113856454659])' />
+            </column>
+            <column caption='HexBin Y' datatype='real' name='[Calculation_659214406077276160]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+              <calculation class='tableau' formula='HexbinY([Latitude]*[Calculation_263179113856454659], [Longitude]*[Calculation_263179113856454659])&#13;&#10;       /([Calculation_263179113856454659])' />
+            </column>
+            <column caption='Angle' datatype='real' name='[Calculation_659214406078939137]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='PI()/3* INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='HexLat' datatype='real' name='[Calculation_659214406080745474]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_AVG(AVG([Calculation_659214406077276160 1]))+(1/MIN([Calculation_263179113856454659]))*COS([Calculation_659214406078939137])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column aggregation='Sum' caption='Padding' datatype='integer' name='[F1]' role='dimension' type='ordinal' />
+            <column caption='HexLong ' datatype='real' name='[HexLat (copy)_659214406081265667]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_AVG(AVG([Calculation_659214406077276160]))+(1/MIN([Calculation_263179113856454659]))*SIN([Calculation_659214406078939137])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column aggregation='Count' datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_659214406077276160 1]' derivation='None' name='[none:Calculation_659214406077276160 1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_659214406077276160]' derivation='None' name='[none:Calculation_659214406077276160:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[F1]' derivation='None' name='[none:F1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Τοποθεσία]' derivation='None' name='[none:Τοποθεσία:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Θάνατοι]' derivation='Sum' name='[sum:Θάνατοι:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_659214406080745474]' derivation='User' name='[usr:Calculation_659214406080745474:qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[F1]' ordering-type='Field' />
+              <table-calc field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[Calculation_659214406078939137]' ordering-field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[F1]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[HexLat (copy)_659214406081265667]' derivation='User' name='[usr:HexLat (copy)_659214406081265667:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[F1]' ordering-type='Field' />
+              <table-calc field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[Calculation_659214406078939137]' ordering-field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[F1]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+            <column datatype='string' name='[Δήμοι - Περειφερειακές Ενότητες]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Τοποθεσία]' new-bin='true'>
+                <bin default-name='false' value='&quot;Δήμοι&quot;'>
+                  <value>&quot;ΑΓΙΟ ΟΡΟΣ (Αυτοδιοίκητο)&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΒΔΗΡΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΑΘΟΝΗΣΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΑΣ ΒΑΡΒΑΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΑΣ ΠΑΡΑΣΚΕΥΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΒΑΣΙΛΕΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΔΗΜΗΤΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΕΥΣΤΡΑΤΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΟΥ ΝΙΚΟΛΑΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΙΩΝ ΑΝΑΡΓΥΡΩΝ - ΚΑΜΑΤΕΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΚΙΣΤΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΡΑΦΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΓΡΙΝΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΘΗΝΑΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΙΓΑΛΕΩ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΙΓΙΑΛΕΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΙΓΙΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΚΤΙΟΥ - ΒΟΝΙΤΣΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΛΕΞΑΝΔΡΕΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΛΙΑΡΤΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΛΙΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΛΜΥΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΛΜΩΠΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΛΟΝΝΗΣΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΑΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΑΡΟΥΣΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΟΡΓΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΠΕΛΟΚΗΠΩΝ - ΜΕΝΕΜΕΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΥΝΤΑΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΦΙΚΛΕΙΑΣ - ΕΛΑΤΕΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΦΙΛΟΧΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΜΦΙΠΟΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΝΑΤΟΛΙΚΗΣ ΜΑΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΝΑΦΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΝΔΡΑΒΙΔΑΣ - ΚΥΛΛΗΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΝΔΡΙΤΣΑΙΝΑΣ - ΚΡΕΣΤΕΝΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΝΔΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΝΤΙΠΑΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΝΩΓΕΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΠΟΚΟΡΩΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΡΓΙΘΕΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΡΓΟΥΣ - ΜΥΚΗΝΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΡΙΣΤΟΤΕΛΗ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΡΡΙΑΝΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΡΤΑΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΡΧΑΙΑΣ ΟΛΥΜΠΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΡΧΑΝΩΝ - ΑΣΤΕΡΟΥΣΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΣΠΡΟΠΥΡΓΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΣΤΥΠΑΛΑΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΑΧΑΡΝΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΑΡΗΣ - ΒΟΥΛΑΣ - ΒΟΥΛΙΑΓΜΕΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΕΛΟΥ - ΒΟΧΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΕΡΟΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΙΑΝΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΙΣΑΛΤΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΟΪΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΟΛΒΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΟΛΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΟΡΕΙΑΣ ΚΥΝΟΥΡΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΟΡΕΙΩΝ ΤΖΟΥΜΕΡΚΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΡΙΛΗΣΣΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΒΥΡΩΝΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΓΑΛΑΤΣΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΓΑΥΔΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΓΕΩΡΓΙΟΥ ΚΑΡΑΪΣΚΑΚΗ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΓΛΥΦΑΔΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΓΟΡΤΥΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΓΟΡΤΥΝΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΓΡΕΒΕΝΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΑΦΝΗΣ - ΥΜΗΤΤΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΕΛΤΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΕΛΦΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΙΔΥΜΟΤΕΙΧΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΙΟΝΥΣΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΙΟΥ - ΟΛΥΜΠΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΙΡΦΥΩΝ - ΜΕΣΣΑΠΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΙΣΤΟΜΟΥ - ΑΡΑΧΟΒΑΣ - ΑΝΤΙΚΥΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΟΜΟΚΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΟΞΑΤΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΡΑΜΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΥΤΙΚΗΣ ΑΧΑΪΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΥΤΙΚΗΣ ΜΑΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΩΔΩΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΔΩΡΙΔΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΔΕΣΣΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΛΑΣΣΟΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΛΑΦΟΝΗΣΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΛΕΥΣΙΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΛΛΗΝΙΚΟΥ - ΑΡΓΥΡΟΥΠΟΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΜΜΑΝΟΥΗΛ ΠΑΠΠΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΟΡΔΑΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΠΙΔΑΥΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΡΕΤΡΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΡΜΙΟΝΙΔΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΡΥΜΑΝΘΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΕΥΡΩΤΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΖΑΓΟΡΑΣ - ΜΟΥΡΕΣΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΖΑΓΟΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΖΑΚΥΝΘΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΖΑΧΑΡΩΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΖΗΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΖΙΤΣΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΖΩΓΡΑΦΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΗΓΟΥΜΕΝΙΤΣΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΗΛΙΔΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΗΛΙΟΥΠΟΛΕΩΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΗΡΑΚΛΕΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΗΡΑΚΛΕΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΘΑΣΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΘΕΡΜΑΪΚΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΘΕΡΜΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΘΕΡΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΘΗΒΑΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΘΗΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΑΣΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΕΡΑΠΕΤΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΕΡΑΣ ΠΟΛΗΣ ΜΕΣΟΛΟΓΓΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΗΤΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΘΑΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΚΑΡΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΛΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΣΤΙΑΙΑΣ - ΑΙΔΗΨΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΙΩΑΝΝΙΤΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΒΑΛΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΙΣΑΡΙΑΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΛΑΒΡΥΤΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΛΑΜΑΡΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΛΑΜΑΤΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΛΑΜΠΑΚΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΛΛΙΘΕΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΛΥΜΝΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΝΤΑΝΟΥ - ΣΕΛΙΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΡΔΙΤΣΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΡΠΑΘΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΡΠΕΝΗΣΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΡΥΣΤΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΣΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΣΣΑΝΔΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΣΤΟΡΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΤΕΡΙΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΕΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΕΝΤΡΙΚΩΝ ΤΖΟΥΜΕΡΚΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΕΡΑΤΣΙΝΙΟΥ - ΔΡΑΠΕΤΣΩΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΕΡΚΥΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΕΦΑΛΟΝΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΗΦΙΣΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΙΛΕΛΕΡ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΙΛΚΙΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΙΜΩΛΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΙΣΣΑΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΟΖΑΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΟΜΟΤΗΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΟΝΙΤΣΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΟΡΔΕΛΙΟΥ - ΕΥΟΣΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΟΡΙΝΘΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΟΡΥΔΑΛΛΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΡΩΠΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΥΘΗΡΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΥΘΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΥΜΗΣ - ΑΛΙΒΕΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΚΩ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΑΓΚΑΔΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΑΜΙΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΑΡΙΣΑΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΑΥΡΕΩΤΙΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΕΒΑΔΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΕΙΨΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΕΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΕΣΒΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΕΥΚΑΔΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΗΜΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΙΜΝΗΣ ΠΛΑΣΤΗΡΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΟΚΡΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΟΥΤΡΑΚΙΟΥ - ΑΓΙΩΝ ΘΕΟΔΩΡΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΛΥΚΟΒΡΥΣΗΣ - ΠΕΥΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΑΚΡΑΚΩΜΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΑΛΕΒΙΖΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΑΝΔΡΑΣ - ΕΙΔΥΛΛΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΑΝΤΟΥΔΙΟΥ - ΛΙΜΝΗΣ - ΑΓΙΑΣ ΑΝΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΑΡΑΘΩΝΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΑΡΚΟΠΟΥΛΟΥ ΜΕΣΟΓΑΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΑΡΩΝΕΙΑΣ - ΣΑΠΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΕΓΑΛΟΠΟΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΕΓΑΝΗΣΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΕΓΑΡΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΕΓΙΣΤΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΕΣΣΗΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΕΤΑΜΟΡΦΩΣΕΩΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΕΤΣΟΒΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΗΛΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΙΝΩΑ ΠΕΔΙΑΔΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΟΝΕΜΒΑΣΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΟΣΧΑΤΟΥ - ΤΑΥΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΟΥΖΑΚΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΥΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΥΚΟΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΥΛΟΠΟΤΑΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΜΩΛΟΥ - ΑΓΙΟΥ ΚΩΝΣΤΑΝΤΙΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΑΞΟΥ ΚΑΙ ΜΙΚΡΩΝ ΚΥΚΛΑΔΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΑΟΥΣΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΑΥΠΑΚΤΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΑΥΠΛΙΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΑΠΟΛΗΣ - ΣΥΚΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΖΙΧΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΙΩΝΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΠΡΟΠΟΝΤΙΔΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΑΣ ΣΜΥΡΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΜΕΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΣΤΟΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΕΣΤΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΙΚΑΙΑΣ - ΑΓΙΟΥ ΙΩΑΝΝΗ ΡΕΝΤΗ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΙΣΥΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΟΤΙΑΣ ΚΥΝΟΥΡΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΝΟΤΙΟΥ ΠΗΛΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΞΑΝΘΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΞΗΡΟΜΕΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΞΥΛΟΚΑΣΤΡΟΥ - ΕΥΡΩΣΤΙΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΟΙΝΟΥΣΣΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΟΙΧΑΛΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΟΡΕΣΤΙΑΔΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΟΡΕΣΤΙΔΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΟΡΟΠΕΔΙΟΥ ΛΑΣΙΘΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΟΡΧΟΜΕΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΓΓΑΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΙΑΝΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΙΟΝΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΛΑΙΟΥ ΦΑΛΗΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΛΑΜΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΛΛΗΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΞΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΠΑΓΟΥ - ΧΟΛΑΡΓΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΡΑΝΕΣΤΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΡΓΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΤΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΤΡΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΑΥΛΟΥ ΜΕΛΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΕΙΡΑΙΩΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΕΛΛΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΕΝΤΕΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΕΡΑΜΑΤΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΕΡΙΣΤΕΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΕΤΡΟΥΠΟΛΕΩΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΗΝΕΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΛΑΤΑΝΙΑ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΟΛΥΓΥΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΟΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΡΕΒΕΖΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΡΕΣΠΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΡΟΣΟΤΣΑΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΥΔΝΑΣ - ΚΟΛΙΝΔΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΥΛΑΙΑΣ - ΧΟΡΤΙΑΤΗ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΥΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΥΛΟΥ - ΝΕΣΤΟΡΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΥΡΓΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΠΩΓΩΝΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΡΑΦΗΝΑΣ - ΠΙΚΕΡΜΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΡΕΘΥΜΝΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΡΗΓΑ ΦΕΡΑΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΡΟΔΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΑΛΑΜΙΝΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΑΜΟΘΡΑΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΑΜΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΑΡΩΝΙΚΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΕΡΒΙΩΝ - ΒΕΛΒΕΝΤΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΕΡΙΦΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΕΡΡΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΗΤΕΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΙΘΩΝΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΙΚΙΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΙΚΥΩΝΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΙΝΤΙΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΙΦΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΚΙΑΘΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΚΟΠΕΛΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΚΥΔΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΚΥΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΟΥΛΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΟΥΦΛΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΟΦΑΔΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΠΑΡΤΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΠΑΤΩΝ - ΑΡΤΕΜΙΔΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΠΕΤΣΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΤΥΛΙΔΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΥΜΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΥΡΟΥ - ΕΡΜΟΥΠΟΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΣΦΑΚΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΑΝΑΓΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΕΜΠΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΗΛΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΗΝΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΟΠΕΙΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΡΙΚΚΑΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΡΙΠΟΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΡΙΦΥΛΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΡΟΙΖΗΝΙΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΤΥΡΝΑΒΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΥΔΡΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΑΙΣΤΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΑΡΚΑΔΟΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΑΡΣΑΛΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΙΛΑΔΕΛΦΕΙΑΣ - ΧΑΛΚΗΔΟΝΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΙΛΙΑΤΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΙΛΟΘΕΗΣ - ΨΥΧΙΚΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΛΩΡΙΝΑΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΟΛΕΓΑΝΔΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΟΥΡΝΩΝ ΚΟΡΣΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΦΥΛΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΑΪΔΑΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΑΛΑΝΔΡΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΑΛΚΗΔΟΝΟΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΑΛΚΗΣ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΑΛΚΙΔΕΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΑΝΙΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΕΡΣΟΝΗΣΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΧΙΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΨΑΡΩΝ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΩΡΑΙΟΚΑΣΤΡΟΥ&quot;</value>
+                  <value>&quot;ΔΗΜΟΣ ΩΡΩΠΟΥ&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Περιφερειακές Ενότητες&quot;'>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΙΤΩΛΟΑΚΑΡΝΑΝΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΝΑΤΟΛΙΚΗΣ ΑΤΤΙΚΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΝΔΡΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΡΓΟΛΙΔΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΡΚΑΔΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΡΤΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΑΧΑΪΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΒΟΙΩΤΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΒΟΡΕΙΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΓΡΕΒΕΝΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΔΡΑΜΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΔΥΤΙΚΗΣ ΑΤΤΙΚΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΔΥΤΙΚΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΕΒΡΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΕΥΒΟΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΕΥΡΥΤΑΝΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΖΑΚΥΝΘΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΗΛΕΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΗΜΑΘΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΗΡΑΚΛΕΙΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΑΣΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΕΣΠΡΩΤΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΕΣΣΑΛΟΝΙΚΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΘΗΡΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΙΘΑΚΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΙΚΑΡΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΙΩΑΝΝΙΝΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΒΑΛΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΛΥΜΝΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΡΔΙΤΣΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΡΠΑΘΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΑΣΤΟΡΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΑΣ - ΚΥΘΝΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΝΤΡΙΚΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΡΚΥΡΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΕΦΑΛΛΗΝΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΙΛΚΙΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΟΖΑΝΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΟΡΙΝΘΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΚΩ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΑΚΩΝΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΑΡΙΣΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΑΣΙΘΙΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΕΣΒΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΕΥΚΑΔΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΛΗΜΝΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΑΓΝΗΣΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΕΣΣΗΝΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΗΛΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΜΥΚΟΝΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΝΑΞΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΝΗΣΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΝΟΤΙΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΞΑΝΘΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΑΡΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΕΙΡΑΙΩΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΕΛΛΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΙΕΡΙΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΠΡΕΒΕΖΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΡΕΘΥΜΝΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΡΟΔΟΠΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΡΟΔΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΑΜΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΕΡΡΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΠΟΡΑΔΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΣΥΡΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΤΗΝΟΥ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΤΡΙΚΑΛΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΦΘΙΩΤΙΔΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΦΛΩΡΙΝΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΦΩΚΙΔΑΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΧΑΛΚΙΔΙΚΗΣ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΧΑΝΙΩΝ&quot;</value>
+                  <value>&quot;ΠΕΡΙΦΕΡΕΙΑΚΗ ΕΝΟΤΗΤΑ ΧΙΟΥ&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Θάνατοι]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Τοποθεσία]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[yr:Year:ok]'>
+            <groupfilter function='member' level='[yr:Year:ok]' member='2016' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[Δήμοι - Περειφερειακές Ενότητες]'>
+            <groupfilter function='member' level='[Δήμοι - Περειφερειακές Ενότητες]' member='&quot;Δήμοι&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[yr:Year:ok]</column>
+            <column>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[Δήμοι - Περειφερειακές Ενότητες]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[usr:HexLat (copy)_659214406081265667:qk:2]' field-type='quantitative' max='3521683.706912857' min='1227640.3110447391' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[usr:Calculation_659214406080745474:qk:3]' field-type='quantitative' max='5232369.957590403' min='3921487.9584933473' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[sum:Θάνατοι:qk]' palette='red_blue_white_diverging_10_0' reverse='true' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='light' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+            <encodings>
+              <color column='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[sum:Θάνατοι:qk]' />
+              <lod column='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:Calculation_659214406077276160 1:qk]' />
+              <lod column='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:Calculation_659214406077276160:qk]' />
+              <path column='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:F1:ok]' />
+              <lod column='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:Τοποθεσία:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Τοποθεσία:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:Τοποθεσία:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Θάνατοι:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[sum:Θάνατοι:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[usr:Calculation_659214406080745474:qk:3]</rows>
+        <cols>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[usr:HexLat (copy)_659214406081265667:qk:2]</cols>
+      </table>
+      <simple-id uuid='{49B43E9B-2219-490F-9166-AA3367852F13}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='HexBin Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='radiolist' param='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[Δήμοι - Περειφερειακές Ενότητες]' show-all='false' type='filter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card pane-specification-id='4' param='[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[sum:Θάνατοι:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:Calculation_425871650380410884:nk]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:F1:ok]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:F1:qk]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:Δήμος:nk]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[none:Τοποθεσία:nk]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[sum:Θάνατοι:qk]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[yr:Year:ok]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[Δήμοι - Περειφερειακές Ενότητες]</field>
+            <field>[federated.0fib1of0tsxuii1a4zv8l0jktrl1].[Δήμος]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{61CE69BF-A813-44BF-A686-D8F5AC8872B9}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='HexBin Map' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
